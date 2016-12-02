@@ -1,0 +1,23 @@
+#mJ {
+  border:3px dashed #89C546;
+  height:240px;
+  width:260.4px;
+  background-image: url("../images/sprite-drawing.jpg");
+
+  -webkit-animation: play 1s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -2604px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -2604px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -2604px; }
+}

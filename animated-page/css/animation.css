@@ -1,0 +1,23 @@
+#mJ {
+  border:3px dashed #89C546;
+  height:76px;
+  width:35px;
+  background-image: url("../images/mJsprite.png");
+
+  -webkit-animation: play 1.5s steps(15) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -554px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -554px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -554px; }
+}

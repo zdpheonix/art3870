@@ -1,0 +1,108 @@
+#greeting(color:red;)
+
+.greetingMessage {
+  position: fixed;
+}
+
+* {
+  text-align: center;
+}
+
+.row2 img {
+   height: 800px;
+   width: auto;
+}
+
+#mJ {
+  text-align: center;
+  margin-left: 40%;
+}
+
+.spacer {
+  height: 70px;
+}
+
+#isitforme {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#reviewsandBio {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.row2 img{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 50px;
+}
+
+.row h1 {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#siteDescription {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+#bannerIntro p {
+  font-size: 32px;
+}
+
+.navigation {
+  display: inline-block;
+  border: 3px solid black;
+  margin-left: 20%;
+  text-align: center;
+}
+
+footer dd {
+  display: inline-block;
+  width: 18%;
+  float: left;
+  text-align: center;
+  font-family: fantasy;
+}
+
+footer h3, h4 {
+  text-align: center;
+  width: 50%;
+  font-family: fantasy;
+  margin-left: 20%;
+}
+
+.siteWrapper {
+  background-color: #215dbc;
+}
+
+iframe {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.row2 img, #MJ-sprite img, #isitforme img, #reviewsandBio img, #siteDescription img {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: Helvetica monospace;
+}
+
+.picsSlideshow .cycle-slideshow img {
+  text-align: center;
+  margin-left: 20%;
+}
+
+.LSS img {
+  text-align: center;
+}
