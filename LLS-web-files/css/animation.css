@@ -1,0 +1,125 @@
+/*For player's icon*/
+
+#playerIcon {
+  height:160px;
+  width:180px;
+  opacity: 0;
+  background-image: url("../images/falling-sprite.png");
+
+  -webkit-animation: play 0.8s steps(10) infinite;
+  -moz-animation: play 0.8s steps(10) infinite;
+  -ms-animation: play 0.8s steps(10) infinite;
+  -o-animation: play 0.8s steps(10) infinite;
+    animation: play 0.8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+
+
+/*for player death */
+
+#playerDeath {
+  border:3px dashed #89C546;
+  height:160px;
+  width:180px;
+  background-image: url("../images/player-death.png");
+
+  -webkit-animation: play 1.5s steps(10) infinite;
+  -moz-animation: play 0.8s steps(10) infinite;
+  -ms-animation: play 0.8s steps(10) infinite;
+  -o-animation: play 0.8s steps(10) infinite;
+    animation: play 0.8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+/*for player injury */
+
+#playerInjury {
+  border:3px dashed #89C546;
+  height:160px;
+  width:180px;
+  background-image: url("../images/player-injury.png");
+
+  -webkit-animation: play 1.5s steps(10) infinite;
+  -moz-animation: play 0.8s steps(10) infinite;
+  -ms-animation: play 0.8s steps(10) infinite;
+  -o-animation: play 0.8s steps(10) infinite;
+    animation: play 0.8s steps(10) infinite;
+}
+
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-moz-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+@-o-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -1800px; }
+}
+
+/*For player victory */
+
+/*for player death */
+
+#playerVictory {
+  height:700px;
+  width:350px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../images/parachute.png");
+  background-repeat: no-repeat;
+  transform: {translateY(350px)};
+
+
+  @-webkit-keyframes slideDown {
+    0%
+    {-webkit-transform: translateY(-100%);}
+	50%
+    {-webkit-transform: translateY(8%);}
+	65%
+    {-webkit-transform: translateY(-4%);}
+	80%
+    {-webkit-transform: translateY(4%);}
+	95%
+    {-webkit-transform: translateY(-2%);}
+	100%
+    {-webkit-transform: translateY(0%);}
+}

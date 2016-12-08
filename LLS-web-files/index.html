@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Parachuting Quiz</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/animation.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+  var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct=0;
+  var questions = [
+    ["There are two types of parachutinig operations - what are they?", "Satic Line and HALO","Low-Altitude Jump and Static", "Hopper Jump and High Altitude", "A" ],
+    ["What is the altitude that you deploy your chute during High Altitude Low Opening Jumps?", "1000 ft", "3,000 ft", "2,500 ft", "B"],
+    ["What is an Army parachuter called, if not the title Airbrone?", "Captain", "Ranger", "Foxtrot", "B"],
+    ["Training for 5 weeks in airborne school completes what type of training?", "Basic", "Senior Parachutes", "Master Parachutes", "A"],
+    [" Senior Prachuters earn their rank after how many jumps?", "30", "80", "45", "C"],
+    ["To become a Master Parachuter takes how many years of training AFTER becoming a Senior Parachtuer?", "Eight", "Seven to Nine", "Five to Ten", "C"],
+    ["What is a static line jump?", "Jumping at high altitudes to prevent the enemy from knowing your whereabouts", "Ejecting from the aircraft as two-man teams", "Jumping with parachute lines attached to aircraft"],
+    ["HALO (High Altitude Low Opening) jumps are known in civilian life as skydiving.", "True", "False", "What?", "A"],
+    ["How many mass tactical jumps does a Senior Parachuter serve as Jumpmaster before earning their Master wings?", "Eight", "Ten", "Six", "B"],
+    ["A mass tactical jump consists of how many parachutes at once?", "120", "80", "300", "A"]
+  ];
+    function _(x){
+      return document.getElementById(x);
+    }
+
+    function renderQuestion(){
+      test = _("test");
+      if(pos >= questions.length)  {
+          test.innerHTML = "<h2>You got "+correct+" of "+questions.length+" questions correct</h2>";
+          _("test_status").innerHTML = "Test Completed";
+          pos = 0;
+          correct = 0;
+          return false;
+          }
+      _("test_status").innerHTML = "Question "+(pos+1)+" of "+questions.length;
+      question = questions[pos][0];
+      chA = questions[pos][1];
+      chB = questions[pos][2];
+      chC = questions[pos][3];
+      test.innerHTML = "<h3>"+question+"</h3>";
+      test.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+      test.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
+      test.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
+      test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+    }
+
+    function checkAnswer(){
+      choices = document.getElementsByName("choices");
+      for(var i=0; i<choices.length; i++){
+        if(choices[i].checked) {
+        choice = choices[i].value;
+        }
+      }
+      if(choice == questions[pos][4]){
+          correct++;
+      }
+      pos++;
+      renderQuestion();
+      //console.log(correct);
+      //results();
+    }
+
+    function playerSurvival(){
+      if(pos=9) {
+
+      }
+    }
+
+    //correct = 3;
+   //console.log(correct+"step2");
+
+    function results(){
+      if (questions[9]) {
+        $("resultsButton").css({
+          "opacity":1,
+          "background-color":"#4B5220",
+          "width":"10%",
+          "height":"60px",
+        });
+
+      }
+    }
+
+    window.addEventListener("load", renderQuestion, false);
+
+  </script>
+
+</head>
+
+<body>
+
+  <section id="wrapper">
+
+    <article class="welcome">
+        <h1>MILITARY PARACHUTING QUIZ</h1>
+            <img src="images/plane.png" id="plane" alt="">
+        <div id="startButton">Start</div>
+    </article>
+
+    <section id="sky">
+      <img id="cloud1" src="images/cloud.png" alt="">
+      <img id="cloud2" src="images/cloud2.png" alt="">
+      <img id="cloud3" src="images/cloud.png" alt="">
+      <img id="cloud4" src="images/cloud3.png" alt="">
+      <img id="cloud5" src="images/cloud2.png" alt="">
+      <img id="cloud6" src="images/cloud3.png" alt="">
+
+    <section id="playerIcon"></section>
+
+    <figure id="counter">counter</figure>
+
+    <div id="completeButton"></div>
+
+    <section id="playerDeath">
+      <h1>YOU'RE DEAD, SUCKER!</h1>
+      <h3>It seems that you didn't study up enough. Do your homework BEFORE you get back on that plane.</h3>
+        <div class="retryButton">
+          <p> Retry? <a href="#welcome">Yes</a>/<a href="#startButton">No</a></p>
+        </div>
+    </section>
+
+    <section id="playerInjury">
+      <h1>YOU'RE ALIVE, BUT NOT UNHURT</h1>
+      <h3>You seem to know the basics, but you need to refine your skills. Train, and come back.</h3>
+        <div class="retryButton">
+          <p> Retry? <a href="#welcome">Yes</a>/<a href="#startButton">No</a></p>
+        </div>
+    </section>
+
+    <section id="playerVictory">
+      <h1>SUCCESSFUL JUMP!</h1>
+      <h3>You did your homework, and it paid off! Nice work, soldier!</h3>
+        <div class="retryButton">
+          <p> Retry? <a href="#welcome">Yes</a>/<a href="#startButton">No</a></p>
+        </div>
+    </section>
+
+  </section>
+
+    <h2 id="test_status"></h2>
+    <div id="test"></div>
+    <div id="resultsButton"></div>
+
+    <div class="ground">
+      <img src="images/ground.jpg" alt="">
+    </div>
+
+  </section>
+
+
+  <script>
+  function scrollWin(){
+      $("#button").click
+    }
+  </script>
+
+  <script src="js/counter.js"></script>
+  <script src="js/jquery-3.1.1.js"></script>
+
+</body>
+
+
+
+</html>
